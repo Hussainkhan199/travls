@@ -115,6 +115,8 @@
             <th>Number of Adults</th>
             <th>From Date</th>
             <th>Till daate</th>
+            <th>Button</th>
+            
 
         </tr>
 
@@ -137,6 +139,10 @@
                 echo "<td>".$row['Adults']."</td>";
                 echo "<td>".$row['from_date']."</td>";
                 echo "<td>".$row['to_date']."</td>";
+                echo "<td>";
+                echo "<button type='button class='btn btn-primary'>Button Text</button>";
+                echo "</td>";
+
                 echo "</tr>";
             }
         } else {
@@ -151,6 +157,7 @@
             </div>
             <!-- Chart End -->
     </div>
+ 
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
