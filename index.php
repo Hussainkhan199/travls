@@ -13,11 +13,13 @@
 		$family  = $_POST['family'];
 		$child = $_POST['child'];
 		$adult = $_POST['adult'];
+		$from_date = $_POST['from_date'];
+		$to_date = $_POST['to_date'];
 
 
+			$sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`) VALUES ('$name','$email','$phone','$address','$from','$to','$family','$child','$adult','$from_date','$to_date')";
 
-
-		$sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`) VALUES ('$name','$email','$phone','$address','$from','$to','$family','$child','$adult')";
+		// $sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`,`from_date`, `to_date) VALUES ('$name','$email','$phone','$address','$from','$to','$family','$child','$adult','$from_date','$to_date')";
 		
 		// $sql = "INSERT  INTO 'tickets'(' Name', 'Email', 'Phone Number', 'Address', 'Arriva', 'Destination', 'Total Number of Family', 'Number of Children', 'Number of Adults') VALUES
 		//  ('$name,'$email','$phone','$address','$from','$to','$family','$child','$adult')";
@@ -42,10 +44,6 @@
 		padding-left: 50px;
 	}
 
-	#nextBtn {
-		text-align: right;
-
-	}
 </style>
 
 <body>
@@ -213,19 +211,32 @@
 			<option value="PK">Pakistan</option>
 		</select>
       </div>
+	  <br/>
+	  <div class="form-group" style="padding-top: 20px;">
+        <label for="from_date">From Date</label>
+        <input type="date" class="form-control" name="from_date" id="from_date" >
+      </div>
+	  <div class="form-group" style="padding-top: 20px;">
+        <label for="to_date">Till</label>
+        <input type="date" class="form-control" name="to_date" id="to_date" >
+      </div>
+	  <br/>
       <div class="form-group">
         <label for="totalFamily">Total number of family members:</label>
         <input type="number" class="form-control"  name="family" id="totalFamily" min="0">
       </div>
-      <div class="form-group">
+      <div class="form-group" style="padding-top: 20px;">
         <label for="numChild">Number of children:</label>
         <input type="number" class="form-control"  name="child" id="numChild" min="0">
       </div>
-      <div class="form-group">
+      <div class="form-group" style="padding-top: 20px; margin-bottom:20px">
         <label for="numAdults">Number of adults:</label>
-        <input type="number" class="form-control" name="adult" id="numAdults" min="0">
+        <input type="number" class="form-control" name="adult" id="numAdults" min="0" >
       </div>
-      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+	  <div class="btn">
+
+		  <button type="submit" class="btn btn-primary" name="submit" style ="background-color : #df9023;border:none;">Submit</button>
+		</div>
 										<!-- <div id="step1" class="form-group">
 
 
