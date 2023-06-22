@@ -1,7 +1,7 @@
 <?php
-    require_once "../config/config.php";
+require_once "../config/config.php";
 
-    
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -41,8 +41,9 @@
             border-collapse: collapse;
             width: 100%;
         }
-        
-        th, td {
+
+        th,
+        td {
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid #ddd;
@@ -79,115 +80,115 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="dash.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    
+
                     <a href="user.php" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>User's Data</a>
                 </div>
-                </div>
-            </nav>
         </div>
-        <!-- Sidebar End -->
-
-
-        <!-- Content Start -->
-        <div class="content">
-           <div class = "table">
-
-           <?php
-
-           // SQL query to fetch data from the table
-    $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date` FROM `tickets`";
-
-
-    // $sql = "SELECT t1.id, t1.name, t1.email, t1.address, t1.phone, t1.from, t1.to, t1.family, t1.adults, t1.child, t1.date
-    // FROM table1 t1
-    
-    // Execute the query
-    $result = $conn->query($sql);
-    ?>
-
-    <h2>Data Table</h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Address</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Family Members</th>
-            <th>Number of Children</th>
-            <th>Number of Adults</th>
-            <th>From Date</th>
-            <th>Till daate</th>
-            <th>Button</th>
-            
-
-        </tr>
-
-        <?php
-        // Check if there are any rows returned from the query
-        if ($result->num_rows > 0) {
-            // Loop through the rows and output the data in each row
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>".$row['id']."</td>";
-                echo "<td>".$row['Name']."</td>";
-                echo "<td>".$row['Email']."</td>";
-                echo "<td>".$row['Phone_Number']."</td>";
-                echo "<td>".$row['Address']."</td>";
-                echo "<td>".$row['Arriva']."</td>";
-                echo "<td>".$row['Destination']."</td>";
-            
-                echo "<td>".$row['family']."</td>";
-                echo "<td>".$row['children']."</td>";
-                echo "<td>".$row['Adults']."</td>";
-                echo "<td>".$row['from_date']."</td>";
-                echo "<td>".$row['to_date']."</td>";
-                echo "<td>";
-                echo "<a href='assign.php' class='btn btn-primary'> Assign agent</a>";
-                echo "</td>";
-
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='10'>No data found</td></tr>";
-        }
-
-        // Close the database connection
-        $conn->close();
-        ?>
-    </table>
-           </div>
-            </div>
-            <!-- Chart End -->
+        </nav>
     </div>
-   
+    <!-- Sidebar End -->
 
-   
- 
 
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
+    <!-- Content Start -->
+    <div class="content">
+        <div class="table">
+
+            <?php
+
+            // SQL query to fetch data from the table
+            $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date` FROM `tickets`";
+
+
+            // $sql = "SELECT t1.id, t1.name, t1.email, t1.address, t1.phone, t1.from, t1.to, t1.family, t1.adults, t1.child, t1.date
+            // FROM table1 t1
+
+            // Execute the query
+            $result = $conn->query($sql);
+            ?>
+
+            <h2>Data Table</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Family Members</th>
+                    <th>Number of Children</th>
+                    <th>Number of Adults</th>
+                    <th>From Date</th>
+                    <th>Till daate</th>
+                    <th>Button</th>
+
+
+                </tr>
+
+                <?php
+                // Check if there are any rows returned from the query
+                if ($result->num_rows > 0) {
+                    // Loop through the rows and output the data in each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['Name'] . "</td>";
+                        echo "<td>" . $row['Email'] . "</td>";
+                        echo "<td>" . $row['Phone_Number'] . "</td>";
+                        echo "<td>" . $row['Address'] . "</td>";
+                        echo "<td>" . $row['Arriva'] . "</td>";
+                        echo "<td>" . $row['Destination'] . "</td>";
+
+                        echo "<td>" . $row['family'] . "</td>";
+                        echo "<td>" . $row['children'] . "</td>";
+                        echo "<td>" . $row['Adults'] . "</td>";
+                        echo "<td>" . $row['from_date'] . "</td>";
+                        echo "<td>" . $row['to_date'] . "</td>";
+                        echo "<td>";
+                        echo "<a href='assign.php' class='btn btn-primary'> Assign agent</a>";
+                        echo "</td>";
+
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='10'>No data found</td></tr>";
+                }
+
+                // Close the database connection
+                $conn->close();
+                ?>
+            </table>
+        </div>
+    </div>
+    <!-- Chart End -->
+    </div>
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="bg-light rounded-top p-4">
+            <div class="row">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                 </div>
             </div>
-            <!-- Footer End -->
         </div>
-        <!-- Content End -->
+    </div>
+    <!-- Footer End -->
+    </div>
+    <!-- Content End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
