@@ -1,6 +1,7 @@
 <?php
     require_once "../config/config.php";
 
+    
 ?>
 
 <!DOCTYPE html>
@@ -140,7 +141,7 @@
                 echo "<td>".$row['from_date']."</td>";
                 echo "<td>".$row['to_date']."</td>";
                 echo "<td>";
-                echo "<button type='button class='btn btn-primary'>Button Text</button>";
+                echo "<a href='assign.php' class='btn btn-primary'> Assign agent</a>";
                 echo "</td>";
 
                 echo "</tr>";
@@ -157,6 +158,9 @@
             </div>
             <!-- Chart End -->
     </div>
+   
+
+   
  
 
             <!-- Footer Start -->

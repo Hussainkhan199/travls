@@ -2,7 +2,29 @@
 
     require_once "../config/config.php";
 
+    
+    if(isset($_POST['submit']))
+    {
+        $data = $_POST['ABC'];
+
+    	$sql = "INSERT INTO `assign_to`(`assign_to`) VALUES ('$data')";
+
+        $res = mysqli_query($conn,$sql);
+        if($res)
+        {
+            echo "data inserted";
+            header('Location: user.php');
+        } 
+        else
+        {
+            echo "error";
+        }
+    }
+   
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -80,7 +102,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="dash.phpl" class="navbar-brand d-flex d-lg-none me-4">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
@@ -167,6 +189,24 @@
                 </div>
             </nav>
             <!-- Navbar End -->
+
+
+           
+
+<form action="" method="post">
+    <div class="form-group">
+        <label for="ABC">assign_to:</label>
+        <!-- <input type="date" class="form-control"  name="from" id="from"> -->
+		<select name="ABC" id="assign_to" aria-placeholder="assign to agent">
+			<option value="asd">asd</option>
+			<option value="Khan">Khan</option>
+			<option value="Qwertt">Qwertt</option>
+			<option value="ytrewq">ytrewq</option>
+		</select>
+      </div>
+
+        <button type="submit" name ="submit"> Assign </button>
+    </form>
 
 
                 <h1 style="padding-top: 20px;">Welcome admin</h1>

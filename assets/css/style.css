@@ -433,7 +433,7 @@ label{
     border-radius: 4px;
 }
 .btn{
-   padding-top: 50px;
+    border: none;
     float: right;
 }
 .btn>button
@@ -1352,6 +1352,12 @@ label{
     color: #fff;
 	border-radius:50%;
 
+}
+
+
+#para{
+
+    color : black;
 }
 
 

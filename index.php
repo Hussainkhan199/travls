@@ -1,49 +1,58 @@
 <?php
-	require_once 'head.php';
+require_once 'head.php';
+session_start();
 
-	if(isset($_POST['submit']))
-	{
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$phone  = $_POST['phone'];
-		$address = $_POST['address'];
+if (isset($_POST['submit'])) {
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$phone  = $_POST['phone'];
+	$address = $_POST['address'];
+	$arrival = $_POST['arrival'];
+	$desti = $_POST['destination'];
+	$family  = $_POST['family'];
+	$child = $_POST['child'];
+	$adult = $_POST['adult'];
+	$from_date = $_POST['from'];
+	$to_date = $_POST['to'];
 
-		$from = $_POST['from'];
-		$to = $_POST['to'];
-		$family  = $_POST['family'];
-		$child = $_POST['child'];
-		$adult = $_POST['adult'];
-		$from_date = $_POST['from_date'];
-		$to_date = $_POST['to_date'];
+	$sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`) VALUES ('$name','$email','$phone','$address','$arrival','$desti','$family','$child','$adult','$from_date','$to_date')";
 
-
-			$sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`) VALUES ('$name','$email','$phone','$address','$from','$to','$family','$child','$adult','$from_date','$to_date')";
-
-		// $sql = "INSERT INTO `tickets`(`Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`,`from_date`, `to_date) VALUES ('$name','$email','$phone','$address','$from','$to','$family','$child','$adult','$from_date','$to_date')";
-		
-		// $sql = "INSERT  INTO 'tickets'(' Name', 'Email', 'Phone Number', 'Address', 'Arriva', 'Destination', 'Total Number of Family', 'Number of Children', 'Number of Adults') VALUES
-		//  ('$name,'$email','$phone','$address','$from','$to','$family','$child','$adult')";
-
-		$res = mysqli_query($conn,$sql);
-		if($res)
-		{
-			echo"inserted";
-			header("Location: index.php");
-			
-		}
-		else
-		{
-			echo"not inserted";
-		}
+	$res = mysqli_query($conn, $sql);
+	if ($res) {
+		echo "inserted";
+		echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
+		echo "<script>
+Swal.fire({
+title: 'Success',
+text: 'Flight information added successfully',
+icon: 'success',
+showConfirmButton: false,
+timerProgressBar: true,
+timer: 4000,
+onBeforeOpen: () => {
+Swal.showLoading();
+}
+}).then(function() {
+window.location.href = 'index.php';
+});
+</script>";
+	} else {
+		echo "not inserted";
 	}
-	
-
+}
 ?>
+
+
+
 <style>
 	label {
 		padding-left: 50px;
 	}
 
+	/* #nextBtn {
+		text-align: right;
+
+	} */
 </style>
 
 <body>
@@ -164,80 +173,8 @@
 
 							<div role="tabpanel" class="tab-pane active fade in" id="flights">
 								<div class="tab-para">
-
-
-
-									<form class="form-inline" method="post" id="multiStepForm">
-		
-
-				<div class="form-group">
-					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" class="form-control" id="email" name="email"  placeholder="Enter your email">
-				</div>
-				<div class="form-group">
-					<label for="phone">Phone:</label>
-					<input type="tel" class="form-control" id="phone"  name="phone" placeholder="Enter your phone number">
-				</div>	
-			
-							
-	
-	<div class="form-group">
-		<label for="address">Address:</label>
-        <input type="text" class="form-control" id="address"  name="address" placeholder="Enter your address">
-	</div>
-	<br/>	
-	<br/>		
-      <div class="form-group">
-        <label for="from">From:</label>
-        <!-- <input type="date" class="form-control"  name="from" id="from"> -->
-		<select name="from" id="from">
-			<option value="">from</option>
-			<option value="USA">USA</option>
-			<option value="UK">UK</option>
-			<option value="PK">Pakistan</option>
-		</select>
-      </div>
-      <div class="form-group">
-        <label for="to">To:</label>
-        <!-- <input type="date" class="form-control"  name="to" id="to"> -->
-		<select name="to" id="to">
-			<option value="">to</option>
-			<option value="USA">USA</option>
-			<option value="UK">UK</option>
-			<option value="PK">Pakistan</option>
-		</select>
-      </div>
-	  <br/>
-	  <div class="form-group" style="padding-top: 20px;">
-        <label for="from_date">From Date</label>
-        <input type="date" class="form-control" name="from_date" id="from_date" >
-      </div>
-	  <div class="form-group" style="padding-top: 20px;">
-        <label for="to_date">Till</label>
-        <input type="date" class="form-control" name="to_date" id="to_date" >
-      </div>
-	  <br/>
-      <div class="form-group">
-        <label for="totalFamily">Total number of family members:</label>
-        <input type="number" class="form-control"  name="family" id="totalFamily" min="0">
-      </div>
-      <div class="form-group" style="padding-top: 20px;">
-        <label for="numChild">Number of children:</label>
-        <input type="number" class="form-control"  name="child" id="numChild" min="0">
-      </div>
-      <div class="form-group" style="padding-top: 20px; margin-bottom:20px">
-        <label for="numAdults">Number of adults:</label>
-        <input type="number" class="form-control" name="adult" id="numAdults" min="0" >
-      </div>
-	  <div class="btn">
-
-		  <button type="submit" class="btn btn-primary" name="submit" style ="background-color : #df9023;border:none;">Submit</button>
-		</div>
-										<!-- <div id="step1" class="form-group">
+									<form action="" method="post" class="form-inline">
+										<div id="step1" class="form-group">
 
 
 											<h3>Step 1: Personal Information</h3>
@@ -249,51 +186,61 @@
 												<input type="email" id="email" class="form-control" name="email" required>
 
 												<label for="phone">Phone Number</label>
-												<input type="text" id="phone" class="form-control" name="phone" >
+												<input type="text" id="phone" class="form-control" name="phone">
 												<br />
 												<label for="address" style="padding-top: 20px;">Address</label>
-												<input type="text" id="address" class="form-control" name="address" required >
+												<input type="text" id="address" class="form-control" name="address" required>
 												<br />
 												<div class="btn">
 													<button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
 												</div>
 											</div>
 
-										</div> -->
+										</div>
 										<!-- Step 2: Travel Details -->
-										<!-- <div id="step2" class="form-group" style="display: none;">
+										<div id="step2" class="form-group" style="display: none;">
 											<h3>Step 2: Travel Details</h3>
 											<div class="step_1">
-												<label for="from">From</label>
-												<input type="text" id="from" class="form-control" name="from" required>
+												<label for="from">Arrival</label>
+												<input type="text" id="from" class="form-control" name="arrival" required>
 
-												<label for="to">To</label>
-												<input type="text" id="to" class="form-control" name="to" required>
-
+												<label for="to">Destination</label>
+												<input type="text" id="to" class="form-control" name="destination" required>
+												<br/>
 												<label for="family">Total Number of Family</label>
-												<input type="number" id="family" class="form-control" name="family"  required>
-				
+												<input type="number" id="family" class="form-control" name="family" required>
+
 												<label for="children">Number of Children</label>
 												<input type="number" id="children" class="form-control" name="child" required>
-
+												<br/>
 												<label for="adults">Number of Adults</label>
 												<input type="number" id="adults" class="form-control" name="adult" required>
-												<div class="btn">
-													<button type="button" id="prevBtn2" class="btn btn-secondary" >Previous</button>
-													<button type="button" id="nextBtn2" class="btn btn-primary" style="margin-right:10px;" >Next</button>
+
+												<label for="from">From date:</label>
+												<input type="date" class="form-control" name="from" id="fromdate">
+												<label for="to">To date:</label>
+												<input type="date" class="form-control" name="to" id="todate">
+
+												<div class="btn mb-5">
+													<button type="button" id="prevBtn2" class="btn btn-secondary">Previous</button>
+													<button type="button" id="nextBtn2" class="btn btn-primary" style="margin-right:10px;">Next</button>
 												</div>
 											</div>
-										</div> -->
+										</div>
 
 										<!-- Step 3: Confirmation -->
-										<!-- <div id="step3" class="form-group" style="display: none;">
+										<div id="step3" class="form-group" style="display: none;">
 											<h3>Step 3: Confirmation</h3>
 											<div id="confirmation"></div>
 
-											<button type="button" id="prevBtn3" class="btn btn-secondary">Previous</button>
-											<button type="submit" class="btn btn-success" name="submit">Confirm</button>
+
+											<div class="abc" style=" float: right;">
+
+												<button type="button" id="prevBtn3" class="btn btn-secondary">Previous</button>
+												<button type="submit" class="btn btn-primary" name="submit" style="background-color : #df9023;">Confirm</button>
+											</div>
 										</div>
-									</form> -->
+									</form>
 								</div>
 
 							</div>
@@ -1212,7 +1159,7 @@
 
 	<!--Custom JS-->
 	<script src="assets/js/custom.js"></script>
-	<!-- <script>
+	<script>
 		$(document).ready(function() {
 			var currentStep = 1;
 
@@ -1221,7 +1168,7 @@
 				$("#step1").hide();
 				$("#step2").show();
 				currentStep = 2;
-			}); 
+			});
 
 			$("#nextBtn2").click(function() {
 				// Move to next step
@@ -1239,17 +1186,26 @@
 				var family = $("#family").val();
 				var children = $("#children").val();
 				var adults = $("#adults").val();
+				var fromdate = $("#fromdate").val();
+				var todate = $("#todate").val();
+
+
 
 				var confirmationHtml = `
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone Number:</strong> ${phone}</p>
-          <p><strong>Address:</strong> ${address}</p>
-          <p><strong>From:</strong> ${from}</p>
-          <p><strong>To:</strong> ${to}</p>
-          <p><strong>Total Number of Family:</strong> ${family}</p>
-          <p><strong>Number of Children:</strong> ${children}</p>
-          <p><strong>Number of Adults:</strong> ${adults}</p>
+			<div class = "para" id = para>
+          <p style="font-size : 15px;">Name:${name}</p>
+          <p style="font-size : 15px;">Email: ${email}</p>
+          <p style="font-size : 15px;">Phone Number: ${phone}</p>
+          <p style="font-size : 15px;">Address: ${address}</p>
+          <p style="font-size : 15px;">Arrival: ${from}</p>
+          <p style="font-size : 15px;">Destinatio : ${to}</p>
+          <p style="font-size : 15px;">Total Number of Family: ${family}</p>
+          <p style="font-size : 15px;">Number of Children: ${children}</p>
+          <p style="font-size : 15px;">Number of Adults: ${adults}</p>
+          <p style="font-size : 15px;">From date: ${fromdate}</p>
+          <p style="font-size : 15px;">To date: ${todate}</p>
+			</div>
+
         `;
 
 				$("#confirmation").html(confirmationHtml);
@@ -1282,9 +1238,14 @@
 				$("#step1").show();
 			});
 		});
-	</script> -->
+	</script>
 
-
+	<style>
+		.btn {
+			margin-left: 3px;
+			padding-bottom: 4px !important;
+		}
+	</style>
 </body>
 
 </html>
