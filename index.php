@@ -199,7 +199,7 @@ window.location.href = 'index.php';
 										</div>
 										<!-- Step 2: Travel Details -->
 										<div id="step2" class="form-group" style="display: none;">
-											<h3>Step 2: Travel Details</h3>
+											<h3>Step 1: Travel Details</h3>
 											<div class="step_1">
 												<label for="from">Arrival</label>
 												<input type="text" id="from" class="form-control" name="arrival" required>

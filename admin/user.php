@@ -97,6 +97,10 @@
            // SQL query to fetch data from the table
     $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date` FROM `tickets`";
 
+
+    // $sql = "SELECT t1.id, t1.name, t1.email, t1.address, t1.phone, t1.from, t1.to, t1.family, t1.adults, t1.child, t1.date
+    // FROM table1 t1
+    
     // Execute the query
     $result = $conn->query($sql);
     ?>
