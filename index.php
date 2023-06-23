@@ -7,8 +7,8 @@ if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
 	$phone  = $_POST['phone'];
 	$address = $_POST['address'];
-	$arrival = $_POST['arrival'];
-	$desti = $_POST['destination'];
+	$arrival = $_POST['from'];
+	$desti = $_POST['to'];
 	$family  = $_POST['family'];
 	$child = $_POST['child'];
 	$adult = $_POST['adult'];
@@ -199,13 +199,26 @@ window.location.href = 'index.php';
 										</div>
 										<!-- Step 2: Travel Details -->
 										<div id="step2" class="form-group" style="display: none;">
-											<h3>Step 1: Travel Details</h3>
+											<h3>Step 2: Travel Details</h3>
 											<div class="step_1">
-												<label for="from">Arrival</label>
-												<input type="text" id="from" class="form-control" name="arrival" required>
+												<!-- <label for="from">Arrival</label>
+												<input type="from" class="form-control"  name="from" id="from">
+												<input type="text" id="from" class="form-control" name="arrival" required> -->
+												<label for="from">Select an option:</label>
+														<select id="from" name="from">
+													<option value="">asd</option>
+													<option value="Khan">Khan</option>
+													<option value="Qwertt">Qwertt</option>
+													<option value="ytrewq">ytrewq</option>
+												</select>
 
-												<label for="to">Destination</label>
-												<input type="text" id="to" class="form-control" name="destination" required>
+												<label for="to">Select an option:</label>
+														<select id="to" name="to">	
+													<option value="">asd</option>
+													<option value="Khan">Khan</option>
+													<option value="Qwertt">Qwertt</option>
+													<option value="ytrewq">ytrewq</option>
+												</select>
 												<br/>
 												<label for="family">Total Number of Family</label>
 												<input type="number" id="family" class="form-control" name="family" required>
@@ -220,6 +233,14 @@ window.location.href = 'index.php';
 												<input type="date" class="form-control" name="from" id="fromdate">
 												<label for="to">To date:</label>
 												<input type="date" class="form-control" name="to" id="todate">
+												<div class="invisible">
+
+
+													<label for="from">From date:</label>
+													<input type="text" class="form-control" name="from" id="fromdate1">
+													<label for="to">To date:</label>
+													<input type="text" class="form-control" name="to" id="todate1">
+												</div>
 
 												<div class="btn mb-5">
 													<button type="button" id="prevBtn2" class="btn btn-secondary">Previous</button>

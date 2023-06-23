@@ -16,6 +16,9 @@
             echo "<script>alert('Email or Password is incorrect!')</script>";
         }
     }
+
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Zis travels Dashborad</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
