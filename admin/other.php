@@ -69,6 +69,7 @@ if (isset($_POST['submit'])) {
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>password</th>
             </tr>
             <?php
             if (mysqli_num_rows($result) > 0) {
@@ -78,6 +79,7 @@ if (isset($_POST['submit'])) {
                         <td><?= $data['id'] ?></td>
                         <td><?= $data['name'] ?></td>
                         <td><?= $data['email'] ?></td>
+                        <td><?= $data['password'] ?></td>
                         <td>
                             <form action="remove.php" method="post">
                                 <button class="btn btn-danger" name="remove" value="<?= $data['id']; ?>"> Remove this admin</button>
