@@ -2,6 +2,21 @@
     require_once "../config/config.php";
 
 
+    if(isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "SELECT * FROM admin WHERE name = '$email' AND pasword = '$password'";
+        $result = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($result) > 0){
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['admin'] = $row['id'];
+            header("Location: dash.php");
+        }else{
+            echo "<script>alert('Email or Password is incorrect!')</script>";
+        }
+    }
+
     
     
 ?>
@@ -57,17 +72,30 @@
                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="#" class="">
-                                <h3  style="color:#df9023"><i class="fa fa-hashtag me-2" style="color:#df9023"></i>Zistravel pakistan</h3>
+                            <h3  style="color:#df9023"><i class="fa fa-hashtag me-2" style="color:#df9023"></i>Zistravel pakistan</h3>
                             </a>
-                            <br/>
-                         
+                            
                         </div>
-                        <h1 style="text-align:center">What are you?</h1>
-                        <div style="align-items: center;display: flex;justify-content: space-evenly; padding-top:20px">
-
-                            <button class="btn btn-primary" style="background-color:#df9023; border:none"> <a href="admin_form.php" style="color:white"> Admin</a></button>
-                            <button class="btn btn-primary" style="background-color:#df9023; border:none"> <a href="user_form.php" style="color:white"> User</a></button>
+                        <h3 style="text-align: center;"><strong>Only for admin</strong></h3>
+                        <form action="" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+                            <label for="floatingInput">Email address</label>
                         </div>
+                        <div class="form-floating mb-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <a href="">Forgot Password</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4" name="submit" style="background-color:#df9023; border:none">Sign In</button>
+                        
+                        </form>
                     </div>
                 </div>
             </div>

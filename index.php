@@ -7,8 +7,8 @@ if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
 	$phone  = $_POST['phone'];
 	$address = $_POST['address'];
-	$arrival = $_POST['from'];
-	$desti = $_POST['to'];
+	$arrival = $_POST['arrival'];
+	$desti = $_POST['desti'];
 	$family  = $_POST['family'];
 	$child = $_POST['child'];
 	$adult = $_POST['adult'];
@@ -204,16 +204,15 @@ window.location.href = 'index.php';
 												<!-- <label for="from">Arrival</label>
 												<input type="from" class="form-control"  name="from" id="from">
 												<input type="text" id="from" class="form-control" name="arrival" required> -->
-												<label for="from">Select an option:</label>
-														<select id="from" name="from">
-													<option value="">asd</option>
-													<option value="Khan">Khan</option>
-													<option value="Qwertt">Qwertt</option>
-													<option value="ytrewq">ytrewq</option>
-												</select>
+												<label for="myOption">Choose an option:</label>
+													<select id="from" name="arrival">
+													<option value="option1">Option 1</option>
+													<option value="option2">Option 2</option>
+													<option value="option3">Option 3</option>
+													</select>
 
 												<label for="to">Select an option:</label>
-														<select id="to" name="to">	
+														<select id="to" name="desti">	
 													<option value="">asd</option>
 													<option value="Khan">Khan</option>
 													<option value="Qwertt">Qwertt</option>
