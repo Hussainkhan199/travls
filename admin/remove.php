@@ -12,7 +12,7 @@
         if($res)
         {
             echo "<script>alert('Admin is remove')</script>";
-            header("location:other.php");
+            header("location:display_user.php");
         }
         else
         {

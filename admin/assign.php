@@ -2,14 +2,6 @@
 
     require_once "../config/config.php";
 
-    if(isset($_GET['remove']))
-
-    {
-        $user_id = $_GET['id'];
-
-        // $sql = "INSERT INTO `tickets`(`id`, `Agent`) VALUES ('$id')";
-    }
-
     
    
 ?>
@@ -53,12 +45,12 @@
 
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
+        <!-- Spinner Start
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
 
@@ -182,23 +174,24 @@
             <!-- Navbar End -->
 
 
-           <?php
-                if(isset($_GET['id']))
-                {
-                     $data = $_GET['id'];
-                    //  $query = "SELECT * FROM tickets where id = '$data' LIMIT 1 ";
-                     $query = "INSERT INTO tickets(`id`,`Agent`) where ('$data','$ABC') ";
-                        $res = mysqli_query($conn,$query);
-                        if($res){
-                            echo "success";
-                        }else{
-                            echo "failed";
-                        }
+            <?php
+if(isset($_POST['submit']) && isset($_GET['id'])) {
+    $data = $_GET['id'];
+    $ABC = $_POST['ABC'];
 
-                }
+    // Establish a database connection (assuming you have done this)
 
-            ?>
+    // Prepare the update query
+    $query = "UPDATE tickets SET Agent = '$ABC' WHERE id = '$data'";
+    $res = mysqli_query($conn, $query);
 
+    if($res) {
+        echo "Update successful";
+    } else {
+        echo "Update failed";
+    }
+}
+?>
 <form action="" method="post">
     <div class="form-group">
         <label for="ABC">assign_to:</label>

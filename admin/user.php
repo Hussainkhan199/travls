@@ -70,7 +70,7 @@ include "header.php";
                             <td><?=$data['family']?></td>
                             <td>
                             <form action="assign.php" method="post">
-                                <button class="btn btn-danger" name="remove" value="<?= $data['id']; ?>"> Remove this admin</button>
+                            <a href="assign.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">Assign Agent</a>
                             </form>
                             </td>
                         </tr>
@@ -128,7 +128,9 @@ include "header.php";
 
 
 
-
+<form action="">
+    sec
+</form>
     <?php
 
         include "footer.php";
