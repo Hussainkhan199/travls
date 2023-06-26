@@ -69,7 +69,9 @@ include "header.php";
                             <td><?=$data['to_date']?></td>
                             <td><?=$data['family']?></td>
                             <td>
-                                <a href="assign.php?id=<?=$data['id']?>" class="btn btn-primary"> Assign Agent </a>
+                            <form action="assign.php" method="post">
+                                <button class="btn btn-danger" name="remove" value="<?= $data['id']; ?>"> Remove this admin</button>
+                            </form>
                             </td>
                         </tr>
                         <?php

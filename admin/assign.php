@@ -2,6 +2,14 @@
 
     require_once "../config/config.php";
 
+    if(isset($_GET['remove']))
+
+    {
+        $user_id = $_GET['id'];
+
+        // $sql = "INSERT INTO `tickets`(`id`, `Agent`) VALUES ('$id')";
+    }
+
     
    
 ?>
@@ -183,8 +191,7 @@
                         $res = mysqli_query($conn,$query);
                         if($res){
                             echo "success";
-                        }else
-                        {
+                        }else{
                             echo "failed";
                         }
 
