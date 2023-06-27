@@ -68,7 +68,7 @@ require_once "../config/config.php";
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="dash.php" class="navbar-brand mx-4 mb-3">
+                <a href="user_for_other_admins.php" class="navbar-brand mx-4 mb-3">
                 <h3  style="color:#df9023; font-size:20px"><i class="fa fa-hashtag me-2" style="color:#df9023"></i>Zistravel pakistan</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -105,7 +105,7 @@ require_once "../config/config.php";
             <?php
 
             // SQL query to fetch data from the table
-            $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`,`Agent`FROM `tickets`";
+            $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`,`Agent`,`status` FROM `tickets`";
 
 
             // $sql = "SELECT t1.id, t1.name, t1.email, t1.address, t1.phone, t1.from, t1.to, t1.family, t1.adults, t1.child, t1.date
@@ -131,6 +131,9 @@ require_once "../config/config.php";
                     <th>From Date</th>
                     <th>Till daate</th>
                     <th>Assgn Agent</th>
+                    <th>Status</th>
+                    <th>Status</th>
+
 
 
                 </tr>
@@ -159,7 +162,13 @@ require_once "../config/config.php";
                             <td><?=$data['to_date']?></td>
                             <td><?=$data['family']?></td>
                             <td>
-                            <?=$data['Agent']?>
+                            <?=$data['Agent']?> </td>
+                            <td>
+                            <?=$data['status']?> </td>
+                            <td>
+                            <form action="status.php" method="post">
+                            <a href="status.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">Status</a>
+                            </form>
                             </td>
                         </tr>
                         <?php

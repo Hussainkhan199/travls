@@ -15,7 +15,7 @@ include "header.php";
             <?php
 
             // SQL query to fetch data from the table
-            $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date` FROM `tickets`";
+            $sql = "SELECT `id`, `Name`, `Email`, `Phone_Number`, `Address`, `Arriva`, `Destination`, `family`, `children`, `Adults`, `from_date`, `to_date`,`Agent`,`status` FROM `tickets`";
 
 
             // $sql = "SELECT t1.id, t1.name, t1.email, t1.address, t1.phone, t1.from, t1.to, t1.family, t1.adults, t1.child, t1.date
@@ -40,7 +40,9 @@ include "header.php";
                     <th>Number of Adults</th>
                     <th>From Date</th>
                     <th>Till daate</th>
-                    <th>Button</th>
+                    <th>Assigned Agent</th>
+                    <td>status</td>
+                    <td>status</td>
 
 
                 </tr>
@@ -68,6 +70,8 @@ include "header.php";
                             <td><?=$data['from_date']?></td>
                             <td><?=$data['to_date']?></td>
                             <td><?=$data['family']?></td>
+                            <td><?=$data['Agent']?></td>
+                            <td><?=$data['status']?></td>
                              <td>
                             <form action="assign.php" method="post">
                             <a href="assign.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">Assign Agent</a>
