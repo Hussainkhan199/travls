@@ -68,7 +68,7 @@ include "header.php";
                             <td><?=$data['from_date']?></td>
                             <td><?=$data['to_date']?></td>
                             <td><?=$data['family']?></td>
-                            <td>
+                             <td>
                             <form action="assign.php" method="post">
                             <a href="assign.php?id=<?php echo $data['id']; ?>" class="btn btn-primary">Assign Agent</a>
                             </form>
@@ -76,7 +76,7 @@ include "header.php";
                         </tr>
                         <?php
                         }
-                    }
+                    } 
                     else
                     {
                         echo "NO record found";
