@@ -126,11 +126,9 @@ include "header.php";
                 </div>
 
 
+            <a href="download.php"> Download CVS </a>
 
 
-<form action="">
-    sec
-</form>
     <?php
 
         include "footer.php";

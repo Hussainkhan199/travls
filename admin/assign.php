@@ -85,7 +85,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                <a href="dash.php" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
@@ -187,6 +187,7 @@ if(isset($_POST['submit']) && isset($_GET['id'])) {
 
     if($res) {
         echo "Update successful";
+        
     } else {
         echo "Update failed";
     }
@@ -229,7 +230,7 @@ if(isset($_POST['submit']) && isset($_GET['id'])) {
             </div>
             <!-- Footer End -->
         </div>
-        <!-- Content End -->
+        <!-- Content End -->    
 
 
         <!-- Back to Top -->

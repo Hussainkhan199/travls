@@ -231,15 +231,13 @@ window.location.href = 'index.php';
 												<label for="from">From date:</label>
 												<input type="date" class="form-control" name="from" id="fromdate">
 												<label for="to">To date:</label>
-												<input type="date" class="form-control" name="to" id="todate">
-												<div class="invisible">
-
-
+												<input type="date" class="form-control" name="to" id="todate"> 
+												<!-- <div class="invisible">
 													<label for="from">From date:</label>
 													<input type="text" class="form-control" name="from" id="fromdate1">
 													<label for="to">To date:</label>
 													<input type="text" class="form-control" name="to" id="todate1">
-												</div>
+												</div> -->
 
 												<div class="btn mb-5">
 													<button type="button" id="prevBtn2" class="btn btn-secondary">Previous</button>
