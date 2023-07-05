@@ -53,6 +53,13 @@ window.location.href = 'index.php';
 		text-align: right;
 
 	} */
+	.form-control:hover,
+    .form-control:focus,
+	.form-control:active
+	 {
+      border: #df9023  solid 0.2px; /* Set your desired border color or remove it entirely */
+      box-shadow: none; /* Remove the box shadow */
+    }
 </style>
 
 <body>
@@ -179,28 +186,6 @@ window.location.href = 'index.php';
 
 											<h3>Step 1: Personal Information</h3>
 											<div class="step_1">
-												<label for="name">Name</label>
-												<input type="text" id="name" class="form-control" name="name" required>
-
-												<label for="email">Email</label>
-												<input type="email" id="email" class="form-control" name="email" required>
-
-												<label for="phone">Phone Number</label>
-												<input type="text" id="phone" class="form-control" name="phone">
-												<br />
-												<label for="address" style="padding-top: 20px;">Address</label>
-												<input type="text" id="address" class="form-control" name="address" required>
-												<br />
-												<div class="btn">
-													<button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
-												</div>
-											</div>
-
-										</div>
-										<!-- Step 2: Travel Details -->
-										<div id="step2" class="form-group" style="display: none;">
-											<h3>Step 2: Travel Details</h3>
-											<div class="step_1">
 												<!-- <label for="from">Arrival</label>
 												<input type="from" class="form-control"  name="from" id="from">
 												<input type="text" id="from" class="form-control" name="arrival" required> -->
@@ -238,7 +223,30 @@ window.location.href = 'index.php';
 													<label for="to">To date:</label>
 													<input type="text" class="form-control" name="to" id="todate1">
 												</div> -->
+												
+												<div class="btn">
+													<button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
+												</div>
+											</div>
 
+										</div>
+										<!-- Step 2: Travel Details -->
+										<div id="step2" class="form-group" style="display: none;">
+											<h3>Step 2: Travel Details</h3>
+											<div class="step_1">
+												
+											<label for="name">Name</label>
+												<input type="text" id="name" class="form-control" name="name" required>
+
+												<label for="email">Email</label>
+												<input type="email" id="email" class="form-control" name="email" required>
+
+												<label for="phone">Phone Number</label>
+												<input type="text" id="phone" class="form-control" name="phone">
+												<br />
+												<label for="address" style="padding-top: 20px;">Address</label>
+												<input type="text" id="address" class="form-control" name="address" required>
+												<br />
 												<div class="btn mb-5">
 													<button type="button" id="prevBtn2" class="btn btn-secondary">Previous</button>
 													<button type="button" id="nextBtn2" class="btn btn-primary" style="margin-right:10px;">Next</button>
@@ -921,6 +929,7 @@ window.location.href = 'index.php';
 
 			</div><!--/.testemonial-carousel-->
 		</div><!--/.container-->
+		
 
 	</section><!--/.testimonial-->
 	<!-- testemonial End -->
@@ -929,219 +938,109 @@ window.location.href = 'index.php';
 	<!--special-offer start-->
 
 
+<section class="form">
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 info">
+        <h2>Company Information</h2>
+        <p>Address: 123 Main St, City, State</p>
+        <p>Phone: 555-123-4567</p>
+        <p>Email: info@example.com</p>
+      </div>
+      <div class="col-md-6" style="padding-left:80px;padding-right:20px">
+        <h2>Contact Us</h2>
+		<div class="contact_from">
 
+			<form>
+				<div class="form-group">
+					<!-- <label for="name">Name:</label> -->
+					<input type="text" class="form-control" id="name" placeholder="Enter your name" style="width: 100%; height:45px; box-shadow:none">
+				</div>
+				<div class="form-group">
+					<!-- <label for="email">Email:</label> -->
+					<input type="email" class="form-control" id="email" placeholder="Enter your email" style="width: 100%;height:45px;box-shadow:none">
+				</div>
+				<div class="form-group">
+					<!-- <label for="message">Message:</label> -->
+					<textarea class="form-control" id="message" placeholder="Enter your message" style="width: 100%;height:100px;box-shadow:none"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary" style="background-color: #df9023;">Submit</button>
+			</form>
+		</div>
+	</div>
+    </div>
+  </div>
+</section>
 
 
 
 	<!--subscribe start-->
-	<section id="subs" class="subscribe">
-		<div class="container">
-			<div class="subscribe-title text-center">
-				<h2>
-					Join our Subscribers List to Get Regular Update
-				</h2>
-				<p>
-					Subscribe Now. We will send you Best offer for your Trip
-				</p>
-			</div>
-			<form>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-						<div class="custom-input-group">
-							<input type="email" class="form-control" placeholder="Enter your Email Here">
-							<button class="appsLand-btn subscribe-btn">Subscribe</button>
-							<div class="clearfix"></div>
-							<i class="fa fa-envelope"></i>
-						</div>
 
-					</div>
-				</div>
-			</form>
-		</div>
-
-	</section>
+  
+  
 	<!--subscribe end-->
 
 	<!-- footer-copyright start -->
-	<footer class="footer-copyright">
-		<div class="container">
-			<div class="footer-content">
-				<div class="row">
+	<footer class="footer-20192">
+      <div class="site-section">
+        <div class="container">
 
-					<div class="col-sm-3">
-						<div class="single-footer-item">
-							<div class="footer-logo">
-								<a href="index.html">
-									<img src="./assets/logo/logo.png" alt="" srcset="" width="100px">
-								</a>
-								<p>
-									best travel agency
-								</p>
-							</div>
-						</div><!--/.single-footer-item-->
-					</div><!--/.col-->
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">Existed to see world with Us?</h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            
+          </div>
+          <div class="row" >
 
-					<div class="col-sm-3">
-						<div class="single-footer-item">
-							<h2>link</h2>
-							<div class="single-footer-txt">
-								<p><a href="#">home</a></p>
-								<p><a href="#">destination</a></p>
-								<p><a href="#">spacial packages</a></p>
-								<p><a href="#">special offers</a></p>
-								<p><a href="#">blog</a></p>
-								<p><a href="#">contacts</a></p>
-							</div><!--/.single-footer-txt-->
-						</div><!--/.single-footer-item-->
-
-					</div><!--/.col-->
-
-					<div class="col-sm-3">
-						<div class="single-footer-item">
-							<h2>popular destination</h2>
-							<div class="single-footer-txt">
-								<p><a href="#">china</a></p>
-								<p><a href="#">venezuela</a></p>
-								<p><a href="#">brazil</a></p>
-								<p><a href="#">australia</a></p>
-								<p><a href="#">london</a></p>
-							</div><!--/.single-footer-txt-->
-						</div><!--/.single-footer-item-->
-					</div><!--/.col-->
-
-					<div class="col-sm-3">
-						<div class="single-footer-item text-center">
-							<h2 class="text-left">contacts</h2>
-							<div class="single-footer-txt text-left">
-								<p>+1 (300) 1234 6543</p>
-								<p class="foot-email"><a href="#">info@tnest.com</a></p>
-								<p>North Warnner Park 336/A</p>
-								<p>Newyork, USA</p>
-							</div><!--/.single-footer-txt-->
-						</div><!--/.single-footer-item-->
-					</div><!--/.col-->
-
-				</div><!--/.row-->
-
-			</div><!--/.footer-content-->
-			<hr>
-			<div class="foot-icons ">
-				<ul class="footer-social-links list-inline list-unstyled">
-					<li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
-				</ul>
-				<p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
-
-			</div><!--/.foot-icons-->
-			<div id="scroll-Top">
-				<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-			</div><!--/.scroll-Top-->
-		</div><!-- /.container-->
-
-	</footer><!-- /.footer-copyright-->
+            <div class="col-sm">
+              <a href="#" class="footer-logo"><span style="color: #000;">ZIS</span>Travels</a>
+             
+            </div>
+            
+            <div class="col-sm">
+              <h3>Site map</h3>
+              <ul class="list-unstyled links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#about">About us</a></li>
+				<li><a href="#pack">Packages</a></li>
+                <li><a href="#package">Contact us</a></li>
+				<li><a href="#book">Book Now</a></li>
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h3>Further Information</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Follow us</h3>
+              <ul class="list-unstyled social">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+               
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+	  <hr width="80%" style="margin-left:150px">
+	  <p style="color: #fff; text-align:center">© 2023 zistravels.co.uk</p>
+    </footer>
 	<!-- footer-copyright end -->
 
-	<!-- code for form 
-		<!DOCTYPE html>
-<html>
-<head>
-  <title>Inline Form Example</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-
-<div class="container">
-  <form class="form-inline">
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="name" class="sr-only">Name</label>
-      <input type="text" class="form-control" id="name" placeholder="Name">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="from" class="sr-only">From</label>
-      <input type="text" class="form-control" id="from" placeholder="From">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="to" class="sr-only">To</label>
-      <input type="text" class="form-control" id="to" placeholder="To">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="adult" class="sr-only">Adults</label>
-      <input type="number" class="form-control" id="adult" placeholder="Adults">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="child" class="sr-only">Children</label>
-      <input type="number" class="form-control" id="child" placeholder="Children">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="dateArrival" class="sr-only">Date of Arrival</label>
-      <input type="date" class="form-control" id="dateArrival" placeholder="Date of Arrival">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="dateReturn" class="sr-only">Date of Return</label>
-      <input type="date" class="form-control" id="dateReturn" placeholder="Date of Return">
-    </div>
-    <div class="form-group mx-sm-3 mb-2">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="tripType" id="oneWay" value="oneWay">
-        <label class="form-check-label" for="oneWay">One-way</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="tripType" id="return" value="return">
-        <label class="form-check-label" for="return">Return</label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary mb-2">Submit</button>
-  </form>
-</div>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-
- #
-// $name = $_POST['name'];
-
-// $conn = new mysqli('host', 'username', 'password', 'dbname');
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-
-// $stmt = $conn->prepare("INSERT INTO table_name (name, ...) VALUES (?, ...)");
-// $stmt->bind_param("s", $name);
-// $stmt->execute();
-
-// if ($stmt->affected_rows > 0) {
-//     echo "Data inserted successfully.";
-// } else {
-//     echo "Error inserting data.";
-// }
-
-// $stmt->close();
-// $conn->close();
-// ?>
-
-
-			 <script>
-				document.getElementById("form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent form submission
-
-  // Get the values from the form
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var to = document.getElementById("to").value;
-  var from = document.getElementById("from").value;;
-  var child = docment.getElementById("child").value;
-
-  // Display the values in an alert box
-  var message = "Name: " + name + "\nEmail: " + email + "\nTo: " + to + "\nFrom: " + from + "\nChild: " + child;
-  
-  alert(message);
-});
-			</script> -->
+	
 
 
 	<!-- <script src="asset/js/form.js"></script>	 -->
+
+	<script src="https://kit.fontawesome.com/5283ea73ed.js" crossorigin="anonymous"></script>
 
 	<script src="assets/js/jquery.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -1210,18 +1109,27 @@ window.location.href = 'index.php';
 
 
 				var confirmationHtml = `
-			<div class = "para" id = para>
-          <p style="font-size : 15px;">Name:${name}</p>
-          <p style="font-size : 15px;">Email: ${email}</p>
-          <p style="font-size : 15px;">Phone Number: ${phone}</p>
-          <p style="font-size : 15px;">Address: ${address}</p>
-          <p style="font-size : 15px;">Arrival: ${from}</p>
-          <p style="font-size : 15px;">Destinatio : ${to}</p>
-          <p style="font-size : 15px;">Total Number of Family: ${family}</p>
-          <p style="font-size : 15px;">Number of Children: ${children}</p>
-          <p style="font-size : 15px;">Number of Adults: ${adults}</p>
-          <p style="font-size : 15px;">From date: ${fromdate}</p>
-          <p style="font-size : 15px;">To date: ${todate}</p>
+			<div class = "para" id = "para" >
+				<div style="display:flex; gap:5rem">
+						<div class = "first_info">
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Name:</b>${name}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Email:</b> ${email}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Phone Number:</b> ${phone}</p>
+						</div>
+					
+						<div class = "second_info">
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Address:</b> ${address}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Arrival:</b> ${from}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Destinatio :</b> ${to}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Total Number of Family:</b> ${family}</p>
+						</div>
+						<div class = "third_info">
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Number of Children:</b> ${children}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">Number of Adults:</b> ${adults}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">From date:</b> ${fromdate}</p>
+							<p style="font-size : 15px;margin-top:10px"><b style="padding-right:10px">To date: </b>${todate}</p>
+						</div>
+				</div>
 			</div>
 
         `;
@@ -1256,6 +1164,16 @@ window.location.href = 'index.php';
 				$("#step1").show();
 			});
 		});
+		document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+
+
+
 	</script>
 
 	<style>
