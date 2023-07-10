@@ -149,130 +149,18 @@ window.location.href = 'index.php';
 				<div class="col-md-12">
 					<div class="single-travel-boxes">
 						<div id="desc-tabs" class="desc-tabs">
+							<div>
 
-							<ul class="nav nav-tabs" role="tablist">
+								
+								<?php
 
-								<!-- <li role="presentation" >
-									 	<a href="#tours" aria-controls="tours" role="tab" data-toggle="tab">
-									 		<i class="fa fa-tree"></i>
-									 		tours
-									 	</a>
-									</li>
+									include "new_page.php";
+									?>
 
-									<li role="presentation">
-										<a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">
-											<i class="fa fa-building"></i>
-											hotels
-										</a>
-									</li> -->
-
-								<li role="presentation" class="active">
-									<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab" id="book">
-										<i class="fa fa-plane"></i>
-										flights
-									</a>
-								</li>
-							</ul>
-
-
-
-							<!-- -----------------------------------fligts from      -------------------------------------------                      -->
-
-							<div role="tabpanel" class="tab-pane active fade in" id="flights">
-								<div class="tab-para">
-									<form action="" method="post" class="form-inline">
-										<div id="step1" class="form-group">
-
-
-											<h3>Step 1: Personal Information</h3>
-											<div class="step_1">
-												<!-- <label for="from">Arrival</label>
-												<input type="from" class="form-control"  name="from" id="from">
-												<input type="text" id="from" class="form-control" name="arrival" required> -->
-												<label for="myOption">Choose an option:</label>
-													<select id="from" name="arrival">
-													<option value="option1">Option 1</option>
-													<option value="option2">Option 2</option>
-													<option value="option3">Option 3</option>
-													</select>
-
-												<label for="to">Select an option:</label>
-														<select id="to" name="desti">	
-													<option value="">asd</option>
-													<option value="Khan">Khan</option>
-													<option value="Qwertt">Qwertt</option>
-													<option value="ytrewq">ytrewq</option>
-												</select>
-												<br/>
-												<label for="family">Total Number of Family</label>
-												<input type="number" id="family" class="form-control" name="family" required>
-
-												<label for="children">Number of Children</label>
-												<input type="number" id="children" class="form-control" name="child" required>
-												<br/>
-												<label for="adults">Number of Adults</label>
-												<input type="number" id="adults" class="form-control" name="adult" required>
-
-												<label for="from">From date:</label>
-												<input type="date" class="form-control" name="from" id="fromdate">
-												<label for="to">To date:</label>
-												<input type="date" class="form-control" name="to" id="todate"> 
-												<!-- <div class="invisible">
-													<label for="from">From date:</label>
-													<input type="text" class="form-control" name="from" id="fromdate1">
-													<label for="to">To date:</label>
-													<input type="text" class="form-control" name="to" id="todate1">
-												</div> -->
-												
-												<div class="btn">
-													<button type="button" id="nextBtn1" class="btn btn-primary">Next</button>
-												</div>
-											</div>
-
-										</div>
-										<!-- Step 2: Travel Details -->
-										<div id="step2" class="form-group" style="display: none;">
-											<h3>Step 2: Travel Details</h3>
-											<div class="step_1">
-												
-											<label for="name">Name</label>
-												<input type="text" id="name" class="form-control" name="name" required>
-
-												<label for="email">Email</label>
-												<input type="email" id="email" class="form-control" name="email" required>
-
-												<label for="phone">Phone Number</label>
-												<input type="text" id="phone" class="form-control" name="phone">
-												<br />
-												<label for="address" style="padding-top: 20px;">Address</label>
-												<input type="text" id="address" class="form-control" name="address" required>
-												<br />
-												<div class="btn mb-5">
-													<button type="button" id="prevBtn2" class="btn btn-secondary">Previous</button>
-													<button type="button" id="nextBtn2" class="btn btn-primary" style="margin-right:10px;">Next</button>
-												</div>
-											</div>
-										</div>
-
-										<!-- Step 3: Confirmation -->
-										<div id="step3" class="form-group" style="display: none;">
-											<h3>Step 3: Confirmation</h3>
-											<div id="confirmation"></div>
-
-
-											<div class="abc" style=" float: right;">
-
-												<button type="button" id="prevBtn3" class="btn btn-secondary">Previous</button>
-												<button type="submit" class="btn btn-primary" name="submit" style="background-color : #df9023;">Confirm</button>
-											</div>
-										</div>
-									</form>
-								</div>
-
-							</div>
-
+									</div>	
 
 						</div>
+				</div>
 
 					</div><!--/.tabpannel-->
 
