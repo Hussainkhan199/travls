@@ -1,7 +1,5 @@
 /*==================================
-* Author        : "ThemeSine"
-* Template Name : Travel
-* Version       : 1.0
+
 ==================================== */
 
 /*==================================
@@ -293,20 +291,20 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(223, 144, 35, 1)),
-    url(../../assets/images/main-hero.jpeg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(../../assets/images/bg_1.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 1000px;
 }
 .about-us:before {
   position: absolute;
-  content: "";  
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 122, 207, 0.4);
+  /*background: rgba(0, 0,0, 0.4);*/    
 }
 
 /*about-us-content*/
@@ -338,7 +336,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d7a75f;
+  background: #df9023;
   border: 1px solid #000000;
   width: 200px;
   height: 60px;
@@ -371,7 +369,7 @@ body {
 --------------------------------------*/
 .single-travel-boxes {
   margin-top: -125px;
-  background: #144A6B;
+  background: #fff;
 }
 .tab-para p {
   font-size: 24px;
@@ -399,7 +397,6 @@ body {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  content: none;
 }
 
 /* .desc-tabs */
@@ -469,6 +466,8 @@ input[type="number"] {
 /*-------------------------------------
         6. Gallery
 --------------------------------------*/
+
+
 .gallery {
   background: #f9f9f9;
 }
@@ -505,10 +504,12 @@ input[type="number"] {
   float: left;
   position: relative;
   margin-bottom: 30px;
-  overflow: hidden;
+  
 }
 /*.item img*/
 .filtr-container .filtr-item img {
+     
+  filter: brightness(55%);
   width: 100%;
   height: 100%;
   transition: 0.5s;
@@ -516,7 +517,7 @@ input[type="number"] {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s;
+
 }
 .filtr-container .filtr-item:hover img {
   -webkit-transform: scale(1.5);
@@ -569,7 +570,7 @@ input[type="number"] {
 }
 .filtr-container .filtr-item:hover .item-title a,
 .filtr-container .filtr-item:hover .item-title p {
-  color: #2cdbb5;
+  color: #d3ae2b;
 }
 /*.item-title*/
 
@@ -726,6 +727,7 @@ input[type="number"] {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  background-color:#df9023;
 }
 .about-view.packages-btn:hover {
   box-shadow: 0 5px 20px rgba(14, 15, 18, 0.3);
@@ -1371,10 +1373,6 @@ input[type="number"] {
   padding-top: 20px;
 }
 
-.contact_from>form{
-  row-gap: 10px;
-}
-
 
 .location{
 
@@ -1396,213 +1394,4 @@ input[type="number"] {
 }
 .location>p{
   color: #fff;
-}
-
-
-
-.search-section .tab-content {
-  color: #144A6B !important;
-  background: #144A6B !important;
-  /* padding: 15px; */
-  padding-left:10px ;
-  left: 10px
-}
-
-.search-section label {
-  font-size: 15px;
-  font-weight: 600
-}
-
-.search-section label font {
-  font-size: 12px
-}
-
-.btn-group>.btn:first-child {
-  color: #000
-}
-
-.search-section .form-control {
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 0;
-  color: #000;
-  display: block;
-  font-size: 15px;
-  height: 35px;
-  line-height: 1.42857;
-  padding: 5px 10px;
-  transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
-  width: 100%
-}
-
-.search-section .form-control::-moz-placeholder {
-  color: #989da0;
-  opacity: 1
-}
-
-.search-section .form-control:-ms-input-placeholder {
-  color: #bec4c8
-}
-
-.search-section .form-control::-webkit-input-placeholder {
-  color: #bec4c8
-}
-
-.search-section .form-control::-o-input-placeholder {
-  color: #bec4c8
-}
-
-.search-section .input-group-addon {
-  background: #f79617;
-  color: #07253f;
-  border-top: 1px solid #bec4c8;
-  border-right: 1px solid #bec4c8;
-  border-bottom: 1px solid #bec4c8;
-  border-radius: 0
-}
-
-.search-section .product-search-title {
-  font-size: 20px;
-  display: block;
-  /*text-transform: uppercase;*/
-  color: #f79617
-}
-
-.search-section .search-col-padding {
-  padding-top: 15px
-}
-
-.search-section option {
-  color: #07253f
-}
-
-#ui-datepicker-div {
-  background: #fff;
-  z-index: 9999999999!important
-}
-
-.ui-datepicker-calendar a {
-  padding: 5px;
-  color: #fff
-}
-
-.ui-datepicker-calendar a:hover {
-  color: #00adef
-}
-
-.ui-datepicker-calendar td {
-  padding: 10px 5px
-}
-
-.ui-datepicker-calendar .ui-state-disabled {
-  color: #0a3152
-}
-
-.ui-datepicker-calendar th {
-  color: #015696;
-  padding: 7px
-}
-
-.ui-datepicker-header {
-  margin: 10px
-}
-
-.ui-datepicker-header .ui-datepicker-title {
-  color: #015699;
-  text-align: center
-}
-
-.ui-datepicker-header a {
-  color: #fff;
-  cursor: pointer
-}
-
-.ui-datepicker-header a:hover {
-  color: #00adef
-}
-
-.ui-spinner-down i,
-.ui-spinner-up i {
-  color: #07253f;
-  margin-top: -27px;
-  z-index: 99999
-}
-
-.ui-spinner-up i {
-  float: right;
-  margin-right: 10px
-}
-
-.ui-spinner-down i {
-  float: left;
-  margin-left: 10px
-}
-
-.quantity-padding {
-  padding-left: 27px!important
-}
-
-.ui-datepicker-prev {
-  float: left
-}
-
-.ui-datepicker-next {
-  float: right
-}
-
-.custom-select-button {
-  background: 0 0;
-  border: 1px solid #bec4c8;
-  border-radius: 0;
-  height: 40px
-}
-
-.bootstrap-select.btn-group .dropdown-menu {
-  background: #2a0a44;
-  border-radius: 0
-}
-
-.bootstrap-select.btn-group .dropdown-menu li a {
-  color: #fff;
-  background: #2a0a44!important
-}
-
-.bootstrap-select.btn-group .dropdown-menu li a:hover {
-  color: #2a0a44;
-  background: #f79617!important
-}
-
-.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-  width: 100%
-}
-
-.btn:hover {
-  color: #fff
-}
-
-.search-button {
-  background: #f79617;
-  border-radius: 0;
-  margin-top: 25px;
-  padding: 5px 10px;
-  font-size: 15px;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #350b48;
-  transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease
-}
-
-.search-button:hover {
-  background: #01609e;
-  color: #fff
-}
-
-.search-section .nav-tabs .active.active:after{
-  content: none;
 }
