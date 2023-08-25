@@ -1,8 +1,10 @@
 <?php
-
-
-require_once "../config/config.php";
-include "header.php";
+    require_once "../config/config.php";
+    session_start();
+    if(!isset($_SESSION['admin']))
+    {
+        header("location:admin_form.php");
+    }else{
 
 
 if (isset($_POST['submit'])) {
@@ -23,6 +25,13 @@ if (isset($_POST['submit'])) {
         echo "Invalid credentials. Please try again.";
     }
 }
+    }
+
+?>
+
+
+<?php
+include "header.php";
 
 ?>
 
