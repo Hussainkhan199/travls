@@ -179,12 +179,11 @@
 
 	</section><!--/.packages-->
 	<div class="extra">
-		<h2>Customize Your <span > Plan</span>  Here</h2>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> Quisquam, voluptatum. Quisquam, voluptatum.</p>
-		
-		<button class="about-view packages-btn">
-			Click Here
-		</button>
+		<h2 style="padding-bottom: 120px;">Customize Your <span > Plan</span>  Here</h2>
+		<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> Quisquam, voluptatum. Quisquam, voluptatum.</p> -->
+		<?php
+				include "./reservation_form.php";
+		?>
 							
 	</div>
 	<!--packages end-->

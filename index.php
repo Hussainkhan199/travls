@@ -2,7 +2,7 @@
 require_once 'head.php';
 require_once './config/config.php';
 
-session_start();
+	session_start();
 
 if (isset($_POST['submit'])) {
 	$name = $_POST['name'];

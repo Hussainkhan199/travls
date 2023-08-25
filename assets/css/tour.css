@@ -31,7 +31,7 @@ body {
       url(../../assets/images/about.jpeg) no-repeat;
     background-size: cover;
     background-position: center-;
-    min-height: 500px;
+    min-height: 400px;
     
 }
 .image-txt>h2{
@@ -119,14 +119,14 @@ body {
   border:none;
 }
 .extra{
-  min-height: 300px;
-  background-color: #f2f2f2;
+  min-height: 600px;
+  /* background-color: #f2f2f2; */
   align-items: center;
-  display: flex;
+  /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
 }
 .extra>h2{
   text-align: center;
@@ -150,6 +150,7 @@ body {
 }
 
 .international{
+  margin-top: 300px;
   min-height: 600px;
   /* color: #D38F1D; */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
