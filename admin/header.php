@@ -79,6 +79,7 @@
                     
                     <a href="user.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User's Data</a>
                     <a href="display_user.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create a User</a>
+                    <a href="tour_data.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>tourism </a>
                    
                 </div>
             </nav>

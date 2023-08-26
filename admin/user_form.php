@@ -11,6 +11,7 @@
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_assoc($result);
             $_SESSION['admin'] = $row['id'];
+            echo $_SESSION['admin'];
             header("Location: user_for_other_admins.php");
         }else{
             echo "<script>alert('Email or Password is incorrect!')</script>";
