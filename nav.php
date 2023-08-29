@@ -1,44 +1,43 @@
-<header class="top-area" style="z-index:1">
-	<div class="header-area">
-		<div class="container">
-			<div class="row">
-			<nav class="navbar navbar-expand-lg navbar-light bg-*">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./assets/logo/logo_1.png" width="100px"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./tourism.php">Tourism</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      
-    </div>
-  </div>
-</nav>
-			</div><!-- /.row -->
-			<div class="home-border"></div><!-- /.home-border-->
-		</div><!-- /.container-->
-	</div><!-- /.header-area -->
 
-</header><!-- /.top-area-->
-<!-- main-menu End -->
+<header class="top-area" style="z-index: 1;">
+		<div class="header-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="logo">
+							<a href="index.html">
+								<img src="assets/logo/logo.png" alt="logo" width="100" />
+							</a>
+						</div><!-- /.logo-->
+					</div><!-- /.col-->
+					<div class="col-sm-10">
+						<div class="main-menu">
+
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<i class="fa fa-bars"></i>
+								</button><!-- / button-->
+							</div><!-- /.navbar-header-->
+							<div class="collapse navbar-collapse">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="smooth-menu"><a href="index.php">home</a></li>
+									<li class="smooth-menu"><a href="#blog">About Us</a></li>
+									<li class=""><a href="tourism.php">Tourism</a></li>
+									<li class="smooth-menu"><a href="#pack">Packages </a></li>
+									<li class="smooth-menu"><a href="#spo">Special Offers</a></li>
+									<li class="smooth-menu"><a href="#subs">Contact Us</a></li>
+									<li>
+										<a href="#book"> Book now</a>
+									</li><!--/.project-btn-->
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.main-menu-->
+					</div><!-- /.col-->
+				</div><!-- /.row -->
+				<div class="home-border"></div><!-- /.home-border-->
+			</div><!-- /.container-->
+		</div><!-- /.header-area -->
+
+	</header><!-- /.top-area-->
+	<!-- main-menu End -->

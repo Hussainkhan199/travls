@@ -126,6 +126,7 @@ body {
 /*-------------------------------------
 		2. Header
 --------------------------------------*/
+
 .top-area {
   position: absolute;
   width: 100%;
@@ -191,7 +192,6 @@ body {
 .main-menu ul .nav .navbar-nav {
   text-align: right;
   float: none;
-  z-index: 100;
 }
 .main-menu .nav li {
   position: relative;
@@ -214,7 +214,7 @@ body {
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s;
 }
-/* .main-menu .nav li.active a,
+.main-menu .nav li.active a,
 .main-menu .nav li a:hover,
 .main-menu .nav li a:focus {
   color: #d7a75f;
@@ -238,7 +238,13 @@ body {
 .main-menu .nav a:hover:before {
   background: #d7a75f;
   width: 100%;
-} */
+}
+.main-menu .nav li.active a:before,
+.main-menu .nav a:hover::after{
+  background: #d7a75f;
+  width: 100%;
+}
+
 
 /*.main-menu*/
 
@@ -285,6 +291,7 @@ body {
   background: #2e5566;
   border: 1px solid #f2f2f2;
 } /*book-btn*/
+
 
 /*-------------------------------------
 		3. 	About

@@ -333,7 +333,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #f2f2f2;
     padding-bottom: 100px;
   }
   
@@ -373,9 +373,10 @@ body {
   .form-control, 
   textarea {
     max-width: 400px;
-    background-color: #000;
+    background-color: #f2f2f2;
     color: #fff;
     letter-spacing: 1px;
+    border: 1px solid #a6a6a6;
   }
   
   .send-button {
@@ -552,6 +553,7 @@ body {
     .form-control, textarea {
       
       margin: 0 auto;
+      background-color: #f2f2f2;
     }
    
     

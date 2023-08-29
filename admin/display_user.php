@@ -37,7 +37,7 @@ include "header.php";
 
 
 <div class="container" style="padding-left:200px; padding-right:200px; margin-top:50px">
-    <h3 style="padding-bottom:20px">User Registration</h3>
+    <h3 style="padding-bottom:20px">Agent Registration</h3>
     <form method="POST" action="">
         <div class="form-group">
             <label for="name">Name:</label>
@@ -62,7 +62,7 @@ include "header.php";
 </div>
 
 <div>
-    <h1>All Admins </h1>
+    <h1>All Agents </h1>
     <div class="table" style="padding-left:300px">
         <?php
         // SQL query to fetch data from the table
@@ -72,7 +72,7 @@ include "header.php";
         // Execute the query
         $result = $conn->query($sql);
         ?>
-        <h2>Data Table</h2>
+        <h2>Agents Table</h2>
         <table>
             <tr>
                 <th>ID</th>

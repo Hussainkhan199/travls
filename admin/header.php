@@ -62,7 +62,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="dash.php" class="navbar-brand mx-4 mb-3">
-                <h3  style="color:#df9023"><i class="fa fa-hashtag me-2" style="color:#df9023"></i>Zistravel pakistan</h3>
+                <h3  style="color:#df9023; font-size:20px"><i class="fa fa-hashtag me-2" style="color:#df9023"></i>Zistravel pakistan</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -78,7 +78,7 @@
                     <a href="dash.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     
                     <a href="user.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>User's Data</a>
-                    <a href="display_user.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create a User</a>
+                    <a href="display_user.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create a agent</a>
                     <a href="tour_data.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>tourism </a>
                    
                 </div>

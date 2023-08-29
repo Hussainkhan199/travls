@@ -959,10 +959,10 @@ window.location.href = 'index.php';
 
 								<div class="col-md-4">
 									<div class="filtr-item">
-										<img src="assets/images/gilgit.jpeg" alt="portfolio image" />
+										<img src="assets/images/kaghan.jpeg" alt="portfolio image" />
 										<div class="item-title">
 											<a href="#">
-												Gilgit
+												kaghan Valley
 											</a>
 											<p><span>$200/-</span></p>
 										</div> <!-- /.item-title-->
