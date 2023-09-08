@@ -1,4 +1,4 @@
-<?php 
+ <?php 
     ob_start();
     require_once "./config/config.php";
     

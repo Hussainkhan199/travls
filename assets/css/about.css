@@ -1,0 +1,223 @@
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    font-size: 14px;
+    color: #222222;
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  .hero{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url(../../assets/images/about_2.jpeg) no-repeat;
+      background-size: cover;
+      background-position: center-;
+      min-height: 400px;
+      
+  }
+  .hero-txt>h2{
+    text-align: center;
+    color: White;
+  }
+
+
+  .about_1{
+    background-color: #f2f2f2;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+  }
+  .text_1{
+    /* padding-top: 50px; */
+    padding-left: 50px;
+    padding-right: 50px;
+   
+  }
+  .text_1>h2{
+    font-size: 30px; 
+    font-weight: 800;
+    color: #D38F1D;
+
+  }
+  
+  /* .mid{
+    font-size: 45px;
+    color: #D38F1D;
+  } */
+  .text_1>p{
+     padding-top: 35px;
+     font-size: 17px;
+  }
+  .text_1>p:last-child{
+    margin-top:-30px ;
+  }
+  .image_1{
+    padding-left: 50px;
+    padding-top: 20px;
+  }
+  .image_1>object{
+    padding-left: 50px;
+  }
+
+  .icon-box{
+    padding-left:50px ;
+    margin-top: 120px;
+    /* display: flex; */
+    /* align-content: flex-start; */
+    align-items: baseline;
+    padding-bottom: 20px;
+    padding-top: initial;
+    
+  }
+  .what{
+    min-height: 400px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .what>h5{
+    margin-top: -380px;
+    padding-left: 50px;
+    text-decoration: underline;
+    font-weight: 700;
+    text-decoration-color: #D38F1D;
+    color: #000;
+    position: absolute;
+     
+  }
+ 
+
+
+  .icon-box>i{
+    
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    background: #D38F1D;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .icon-box>.content{
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+  }
+  .icon-box>.content>h4{
+    color: #000;
+    padding-bottom: 10px;
+  }
+  .pic{
+    background-image: url(../images/sec_bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    min-width: 600px;
+    
+  }
+  /* ----------- why section */
+
+  /* .why{
+    background-color: #D38F1D;
+    min-height: 400px;
+  }
+  .why>.container>.row.about-intro>h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+
+  }
+  .why>.container>.row.about-intro>p{
+    text-align: center;
+    color: #e1e1e1 ;
+    row-gap: 10px;
+  }
+  .icon{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .icon > *{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    gap: 20px;
+    text-align: center;
+  }
+  .icon:last-child{
+    padding-left: 20px;
+  }
+  .icon_1,.icon_2,.icon_3{
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* align-content: center; */
+    /* flex-direction: column;
+    text-align: center;
+    max-width: 300px;
+}
+.icon_1,.icon_2,.icon_3>h4{
+
+  color: white;
+}
+.icon_1>p{
+  color: wheat;
+}
+   */
+
+
+
+   .explror {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        url(../../assets/images/china_.jpg) no-repeat;
+        background-size: cover;
+        min-height: 400px;
+   }
+.pack{
+ 
+  text-align: center;
+  padding-top: 150px;
+  color: #fff;
+}
+.pack>h3{
+  color: #fff;
+  padding-bottom: 20px;
+}
+.pack>a{
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px;
+  padding-top: 10px;
+  color: #000;
+  border-radius: 10px;
+}
+.pack>a:hover
+{
+  background-color: #D38F1D;
+  color: #fff;
+  transition: 0ms;
+}

@@ -22,7 +22,7 @@
 							<div class="collapse navbar-collapse">
 								<ul class="nav navbar-nav navbar-right">
 									<li class="smooth-menu"><a href="index.php">home</a></li>
-									<li class="smooth-menu"><a href="#blog">About Us</a></li>
+									<li class=""><a href="about.php">About Us</a></li>
 									<li class=""><a href="tourism.php">Tourism</a></li>
 									<li class="smooth-menu"><a href="#pack">Packages </a></li>
 									<li class="smooth-menu"><a href="#spo">Special Offers</a></li>

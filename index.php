@@ -932,7 +932,7 @@ window.location.href = 'index.php';
 									</div><!-- /.filtr-item -->
 								</div><!-- /.col -->
 								</div>
-                            	<div class="row">
+                            	<div class="row">`
 								<div class="col-md-4">
 									<div class="filtr-item" style="height: 240px;">
 										<img src="assets/images/brazil_1.jpg" alt="portfolio image" />

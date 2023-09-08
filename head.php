@@ -56,6 +56,7 @@
 		<!--style.css-->
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="stylesheet" href="assets/css/tour.css" />
+		<link rel="stylesheet" href="assets/css/about.css" />
 
 		<!--responsive.css-->
 		<link rel="stylesheet" href="assets/css/responsive.css" />
