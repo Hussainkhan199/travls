@@ -12,7 +12,7 @@
 
     
     <section  class="image">
-		<div class="container">
+		<div class="container">z\
 			<div class="image-content">
 				<div class="row">
                     <div class="col-sm-12">

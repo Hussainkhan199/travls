@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    position: relative;
+    font-size: 14px;
+    color: #222222;
+    background: #fff;
+    font-family: "Poppins", sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  .contact{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url(../../assets/images/about_2.jpeg) no-repeat;
+      background-size: cover;
+      background-position: center-;
+      min-height: 400px;
+      
+  }
+  .contact-txt>h2{
+    text-align: center;
+    color: White;
+  }

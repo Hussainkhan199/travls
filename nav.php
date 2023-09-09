@@ -26,7 +26,7 @@
 									<li class=""><a href="tourism.php">Tourism</a></li>
 									<li class="smooth-menu"><a href="#pack">Packages </a></li>
 									<li class="smooth-menu"><a href="#spo">Special Offers</a></li>
-									<li class="smooth-menu"><a href="#subs">Contact Us</a></li>
+									<li class="#"><a href="contact.php">Contact Us</a></li>
 									<li>
 										<a href="#book"> Book now</a>
 									</li><!--/.project-btn-->
