@@ -58,6 +58,7 @@
 		<link rel="stylesheet" href="assets/css/tour.css" />
 		<link rel="stylesheet" href="assets/css/about.css" />
 		<link rel="stylesheet" href="assets/css/contact.css" />
+		<link rel="stylesheet" href="assets/css/slider.css" />
 
 		<!--responsive.css-->
 		<link rel="stylesheet" href="assets/css/responsive.css" >
